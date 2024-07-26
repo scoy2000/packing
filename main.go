@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"slices"
 	"sort"
@@ -27,7 +28,10 @@ func main() {
 	router.POST("/packs/add/:packSize")
 	router.POST("/packs/remove/:packSize")
 	router.GET("/packs")
-	router.Run("localhost:8080")
+	error := router.Run()
+	if error != nil {
+		log.Fatal(error)
+	}
 }
 
 func handleInput(context *gin.Context) {
