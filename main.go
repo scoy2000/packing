@@ -27,7 +27,7 @@ func main() {
 	router.POST("/packs/add/:packSize")
 	router.POST("/packs/remove/:packSize")
 	router.GET("/packs")
-	router.Run("localhost:8081")
+	router.Run("localhost:8080")
 }
 
 func handleInput(context *gin.Context) {
