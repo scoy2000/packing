@@ -60,9 +60,5 @@ func getMinimumPacks(quantity int) Response {
 		}
 	}
 
-	if minimumQuantity > 0 {
-		packs[packSizes[len(packSizes)-1]]++
-	}
-
 	return Response{Packs: packs}
 }
