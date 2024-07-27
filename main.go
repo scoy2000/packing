@@ -25,9 +25,6 @@ type Response struct {
 func main() {
 	router := gin.Default()
 	router.GET("/packs/:quantity", handleInput)
-	router.POST("/packs/add/:packSize")
-	router.POST("/packs/remove/:packSize")
-	router.GET("/packs")
 	error := router.Run()
 	if error != nil {
 		log.Fatal(error)
